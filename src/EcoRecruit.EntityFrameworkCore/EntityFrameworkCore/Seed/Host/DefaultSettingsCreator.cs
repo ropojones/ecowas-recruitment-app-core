@@ -4,6 +4,8 @@ using Abp.Configuration;
 using Abp.Localization;
 using Abp.MultiTenancy;
 using Abp.Net.Mail;
+using Abp.Zero.Configuration;
+using EcoRecruit.Configuration;
 
 namespace EcoRecruit.EntityFrameworkCore.Seed.Host
 {
@@ -28,6 +30,14 @@ namespace EcoRecruit.EntityFrameworkCore.Seed.Host
             // Emailing
             AddSettingIfNotExists(EmailSettingNames.DefaultFromAddress, "admin@mydomain.com", tenantId);
             AddSettingIfNotExists(EmailSettingNames.DefaultFromDisplayName, "mydomain.com mailer", tenantId);
+            AddSettingIfNotExists(EmailSettingNames.Smtp.Host, "mail.teamoption.ng");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.Port, "485");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.UserName, "ecowas@teamoption.ng");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.Password, "P@ssw0rd123");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.EnableSsl, "false");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.UseDefaultCredentials, "false");
+            AddSettingIfNotExists(AbpZeroSettingNames.UserManagement.IsEmailConfirmationRequiredForLogin, "true");
+            
 
             // Languages
             AddSettingIfNotExists(LocalizationSettingNames.DefaultLanguage, "en", tenantId);

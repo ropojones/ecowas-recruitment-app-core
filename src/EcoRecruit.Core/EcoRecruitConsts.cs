@@ -6,7 +6,7 @@ namespace EcoRecruit
     {
         public const string LocalizationSourceName = "EcoRecruit";
 
-        public const string ConnectionStringName = "Default";
+        public const string ConnectionStringName = "EcoRecruitConn";
 
         public const bool MultiTenancyEnabled = true;
 

@@ -1,47 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <localizationDictionary culture="fr">
-  <texts>
-    <text name="HomePage" value="Accueil" />
-    <text name="About" value="A propos" />
-    <text name="WelcomeMessage" value="Bienvenue sur EcoRecruit !" />
+<texts>
+
+
+
+	<text name="AboutMe" value="Sur moi" />
+
+	<text name="HumanResourceOfficer" value="Spécialiste des Ressources Humaines" />
+	<text name="HumanResourceManager" value="Directeur des Ressources Humaines" />
+
+
+	<text name="Jobs" value="Emplois" />
+	<text name="ListOfJobs" value="Liste des Emplois" />
+	<text name="DeleteJob" value="Supprimer le travail" />
+	<text name="UpdateJob" value="Mettre à jour le travail" />
+	<text name="CreateJob" value="Créer un emploi" />
+	
+<text name="GetStarted" value="Commencer" />
+<text name="HowToApply" value="Comment s'inscrire" />
+<text name="CurrentJobs" value="Postes vacants actuels" />
+<text name="MyApplication" value="Mes applications" /> 
+<text name="Support" value="Soutien" />
+<text name="ExploreJobs" value="Explore jobs now" />
+	<text name="Careers" value="Carrières" />
+<text name="EcoWelcomeText" value="Bienvenue chez EcoRecruit" />
+<text name="EcoWelcomeSubText" value="Plateforme de recrutement et de ressourcement en ligne de la CEDEAO. Vous cherchez à faire carrière dans la CEDEAO ? Créez un CV en ligne avec nous en créant un profil, remplissez vos qualifications académiques et professionnelles, téléchargez votre curriculum vitae, 
+	  recherchez des emplois appropriés auprès de la CEDEAO et postulez. Très facile." />
+<text name="EcoWelcomeCatchPhrase" value="Bâtir une main-d’œuvre diversifiée et inclusive dans la communauté des gens." />
+
+<text name="OrSignIn" value="ou Connectez-vous" />
+<text name="CreateAccount" value="Créer un compte EcoRecruit" />
+
+<text name="UserFriendlyExistingApplicantEmail" value="Il y a déjà un candidat avec cet email." />
+<text name="UserFriendlyNonExistingApplicant" value="Le demandeur n'existe pas." />
+<text name="UserFriendlyExistingApplication" value="Vous avez déjà postulé pour ce poste." />
+<text name="UserFriendlyExistingCertificate" value="Vous avez déjà ajouté ce certificat." />
+<text name="UserFriendlyNonExistingCertificate" value="Le certificat n'existe pas" />
+
+<text name="RegisterNowText" value="S'inscrire maintenant" />
+<text name="EmailActivationText" value="Activez votre compte" />
+<text name="EmailValidationText" value="Un lien sera envoyé à votre email pour activer votre adresse email. Si vous ne recevez pas d'e-mail dans quelques minutes, veuillez réessayer." />
+<text name="NotRegisteredText" value="Pas encore enregistré?" />
+
+<text name="ECORecruit" value="Système de gestion du recrutement de la CEDEAO (ECORecuit)" />
+<text name="AllRights" value="Tous droits réservés" />
+<text name="Copyright" value="Droits d'auteur" />
+<text name="EcowasCommission" value="Commission de la CEDEAO" />
+<text name="DevelopedBy" value="Développé par la Direction des services informatiques" />
+<text name="CreateEcoRecruitAccount" value="Créer un compte candidat sur ECORecruit" />
+<text name="ForgotPassword" value="Mot de passe oublié?" />
+<text name="ECOWAS" value="CEDEAO" />
+	  
+<text name="HomePage" value="Accueil" />
+<text name="About" value="A propos" />
+<text name="WelcomeMessage" value="Bienvenue sur EcoRecruit !" />
     
-    <text name="FormIsNotValidMessage" value="Le formulaire n'est pas valide. Veuillez le corriger." />
-    <text name="TenantNameCanNotBeEmpty" value="Le nom de client (tenant) doit être renseigné." />
+<text name="FormIsNotValidMessage" value="Le formulaire n'est pas valide. Veuillez le corriger." />
+<text name="TenantNameCanNotBeEmpty" value="Le nom de client (tenant) doit être renseigné." />
 
-    <text name="InvalidUserNameOrPassword" value="Nom d'utilisateur ou mot de passe non valide." />
-    <text name="ThereIsNoTenantDefinedWithName{0}" value="Il n'y a aucun nom de client (tenant) correspondant à {0}" />
-    <text name="TenantIsNotActive" value="Le client (tenant) {0} n'est pas actif." />
-    <text name="UserIsNotActiveAndCanNotLogin" value="L'utilisateur {0} n'est pas actif ou ne peut pas s'authentifier." />
-    <text name="PleaseEnterLoginInformation" value="Veuillez entrer vos informations d'authentification" />
-    <text name="TenancyName" value="Nom du client (tenant)" />
-    <text name="UserNameOrEmail" value="Nom d'utilisateur ou email" />
-    <text name="Password" value="Mot de passe" />
-    <text name="RememberMe" value="Se rappeler de moi" />
-    <text name="LogIn" value="Se connecter" />
+<text name="InvalidUserNameOrPassword" value="Nom d'utilisateur ou mot de passe non valide." />
+<text name="ThereIsNoTenantDefinedWithName{0}" value="Il n'y a aucun nom de client (tenant) correspondant à {0}" />
+<text name="TenantIsNotActive" value="Le client (tenant) {0} n'est pas actif." />
+<text name="UserIsNotActiveAndCanNotLogin" value="L'utilisateur {0} n'est pas actif ou ne peut pas s'authentifier." />
+<text name="PleaseEnterLoginInformation" value="Veuillez entrer vos informations d'authentification" />
+<text name="TenancyName" value="Nom du client (tenant)" />
+<text name="UserNameOrEmail" value="Nom d'utilisateur ou email" />
+<text name="Password" value="Mot de passe" />
+<text name="RememberMe" value="Se rappeler de moi" />
+<text name="LogIn" value="Se connecter" />
 
-    <text name="LoginFailed" value="Echec d'authentification !" />
+<text name="LoginFailed" value="Echec d'authentification !" />
 
-    <text name="NameSurname" value="Nom de famille" />
-    <text name="UserName" value="Nom d'utilisateur" />
-    <text name="Name" value="Prénom" />
-    <text name="Surname" value="Nom de famille" />
-    <text name="EmailAddress" value="Adresse email" />
+<text name="NameSurname" value="Nom de famille" />
+<text name="UserName" value="Nom d'utilisateur" />
+<text name="Name" value="Prénom" />
+<text name="Surname" value="Nom de famille" />
+<text name="EmailAddress" value="Adresse email" />
 
-    <text name="Tenants" value="Clients (tenants)" />
-    <text name="SavedSuccessfully" value="Enregistrement réussi" />
-    <text name="CreateNewTenant" value="Créer un nouveau client (tenant)" />
-    <text name="AdminEmailAddress" value="Adresse email de l'administrateur" />
-    <text name="Save" value="Valider" />
-    <text name="Cancel" value="Annuler" />
-    <text name="TenantName_Regex_Description" value="Le nom de client (tenant) doit comporter au moins 2 caractères et commencer par une lettre suivie d'autres lettres, chiffres ou tirets." />
-    <text name="DefaultPasswordIs" value="Le mot de passe par défaut est {0}" />
-    <text name="CanBeEmptyToLoginAsHost" value="Peut être laissé vide pour s'authentifier en tant qu'hébergeur (host)." />
-    <text name="Register" value="S'enregistrer" />
-    <text name="OrLoginWith" value="Ou s'authentifier avec" />
-    <text name="WaitingForActivationMessage" value="Votre compte est en attente d'activation par l'administrateur du système." />
-    <text name="TenantSelection" value="Sélection du client (tenant)" />
-    <text name="TenantSelection_Detail" value="Veuillez choisir l'un de ces clients (tenants) suivants." />
-    <text name="Logout" value="Déconnexion" />
-    <text name="SearchWithThreeDot">Rechercher...</text>
-  </texts>
+<text name="Tenants" value="Clients (tenants)" />
+<text name="SavedSuccessfully" value="Enregistrement réussi" />
+<text name="CreateNewTenant" value="Créer un nouveau client (tenant)" />
+<text name="AdminEmailAddress" value="Adresse email de l'administrateur" />
+<text name="Save" value="Valider" />
+<text name="Cancel" value="Annuler" />
+<text name="TenantName_Regex_Description" value="Le nom de client (tenant) doit comporter au moins 2 caractères et commencer par une lettre suivie d'autres lettres, chiffres ou tirets." />
+<text name="DefaultPasswordIs" value="Le mot de passe par défaut est {0}" />
+<text name="CanBeEmptyToLoginAsHost" value="Peut être laissé vide pour s'authentifier en tant qu'hébergeur (host)." />
+<text name="Register" value="S'enregistrer" />
+<text name="OrLoginWith" value="Ou s'authentifier avec" />
+<text name="WaitingForActivationMessage" value="Votre compte est en attente d'activation par l'administrateur du système." />
+<text name="TenantSelection" value="Sélection du client (tenant)" />
+<text name="TenantSelection_Detail" value="Veuillez choisir l'un de ces clients (tenants) suivants." />
+<text name="Logout" value="Déconnexion" />
+<text name="SearchWithThreeDot">Rechercher...</text>
+</texts>
 </localizationDictionary>
