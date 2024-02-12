@@ -8,7 +8,7 @@ namespace EcoRecruit
 
         public const string ConnectionStringName = "EcoRecruitConn";
 
-        public const bool MultiTenancyEnabled = true;
+        public const bool MultiTenancyEnabled = false;
 
 
         /// <summary>

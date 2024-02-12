@@ -17,6 +17,11 @@ using Abp.AspNetCore.SignalR.Hubs;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.IO;
+using EcoRecruit.Core.BackgroundServices;
+using Quartz;
+using Quartz.Core;
+using Quartz.Impl;
+using System.Collections.Specialized;
 
 namespace EcoRecruit.Web.Host.Startup
 {
@@ -28,15 +33,21 @@ namespace EcoRecruit.Web.Host.Startup
 
         private readonly IConfigurationRoot _appConfiguration;
         private readonly IWebHostEnvironment _hostingEnvironment;
+        private readonly IScheduler _quartzScheduler;
 
         public Startup(IWebHostEnvironment env)
         {
             _hostingEnvironment = env;
             _appConfiguration = env.GetAppConfiguration();
+            _quartzScheduler = ConfigureQuartz();
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
+         
+
+            services.AddSingleton(provider => _quartzScheduler);
+
             //MVC
             services.AddControllersWithViews(options =>
             {
@@ -93,7 +104,7 @@ namespace EcoRecruit.Web.Host.Startup
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            
             app.UseAbpRequestLocalization();
 
             app.UseEndpoints(endpoints =>
@@ -116,7 +127,11 @@ namespace EcoRecruit.Web.Host.Startup
                 options.DisplayRequestDuration(); // Controls the display of the request duration (in milliseconds) for "Try it out" requests.
             }); // URL: /swagger
         }
-
+ 
+        private void OnShutdown()
+        {
+            if (!_quartzScheduler.IsShutdown)_quartzScheduler.Shutdown();
+        }
         private void ConfigureSwagger(IServiceCollection services)
         {
             services.AddSwaggerGen(options =>
@@ -168,6 +183,22 @@ namespace EcoRecruit.Web.Host.Startup
                     options.IncludeXmlComments(webCoreXmlPath);
                 }
             });
+        }
+   
+    
+        public IScheduler ConfigureQuartz()
+        {
+            var props = new NameValueCollection{
+                { "quartz.serializer.type", "binary" }
+            };
+
+            StdSchedulerFactory factory = new StdSchedulerFactory(props);
+            var scheduler =  factory.GetScheduler().Result;
+                       
+             scheduler.Start().Wait() ;
+
+            return scheduler;
+                       
         }
     }
 }
