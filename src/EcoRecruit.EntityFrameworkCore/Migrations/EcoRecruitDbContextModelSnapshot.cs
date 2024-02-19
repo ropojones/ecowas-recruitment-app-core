@@ -1666,6 +1666,9 @@ namespace EcoRecruit.Migrations
                     b.Property<string>("ApplicantNumber")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Availability")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
@@ -1687,19 +1690,19 @@ namespace EcoRecruit.Migrations
                     b.Property<string>("Gender")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Headline")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool?>("IsEcowas")
                         .HasColumnType("bit");
 
                     b.Property<bool?>("IsEcowasVerified")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("JobId")
-                        .HasColumnType("int");
-
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Middle")
+                    b.Property<string>("MiddleName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
@@ -1711,9 +1714,10 @@ namespace EcoRecruit.Migrations
                     b.Property<long>("UserId")
                         .HasColumnType("bigint");
 
-                    b.HasKey("Id");
+                    b.Property<int>("YearsOfExperience")
+                        .HasColumnType("int");
 
-                    b.HasIndex("JobId");
+                    b.HasKey("Id");
 
                     b.ToTable("Applicants");
                 });
@@ -1970,7 +1974,7 @@ namespace EcoRecruit.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("ApplicantNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ApplicationNumber")
                         .HasColumnType("nvarchar(max)");
@@ -2021,10 +2025,13 @@ namespace EcoRecruit.Migrations
 
                     b.HasIndex("ApplicantId");
 
-                    b.HasIndex("JobId", "ApplicantId")
-                        .IsUnique();
+                    b.HasIndex("JobId");
 
-                    b.ToTable("ApplicationsData");
+                    b.HasIndex("UserId", "ApplicantNumber")
+                        .IsUnique()
+                        .HasFilter("[ApplicantNumber] IS NOT NULL");
+
+                    b.ToTable("Applications");
                 });
 
             modelBuilder.Entity("EcoRecruit.Recruitment.Checks.Check", b =>
@@ -2067,25 +2074,49 @@ namespace EcoRecruit.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AgeLimit")
+                        .HasColumnType("int");
+
+                    b.Property<double>("AnnualSalary")
+                        .HasColumnType("float");
+
                     b.Property<string>("Deadline")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Department")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Directorate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Division")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DutyStation")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Institution")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsPublished")
+                        .HasColumnType("bit");
 
                     b.Property<string>("JobRefNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Location")
+                    b.Property<string>("KeyCompetences")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Requirement")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Responsibilities")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Supervisor")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -2505,13 +2536,6 @@ namespace EcoRecruit.Migrations
                     b.Navigation("LastModifierUser");
                 });
 
-            modelBuilder.Entity("EcoRecruit.Recruitment.Applicants.Applicant", b =>
-                {
-                    b.HasOne("EcoRecruit.Recruitment.Jobs.Job", null)
-                        .WithMany("Applicants")
-                        .HasForeignKey("JobId");
-                });
-
             modelBuilder.Entity("EcoRecruit.Recruitment.Applicants.ApplicantCertificateAwarded", b =>
                 {
                     b.HasOne("EcoRecruit.Recruitment.Applicants.Applicant", "Applicant")
@@ -2770,8 +2794,6 @@ namespace EcoRecruit.Migrations
 
             modelBuilder.Entity("EcoRecruit.Recruitment.Jobs.Job", b =>
                 {
-                    b.Navigation("Applicants");
-
                     b.Navigation("JobEcowasCompetences");
 
                     b.Navigation("JobLanguages");

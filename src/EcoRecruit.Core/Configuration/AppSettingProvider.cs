@@ -11,7 +11,7 @@ namespace EcoRecruit.Configuration
         {
             return new[]
             {
-                 new SettingDefinition(AppSettingNames.UiTheme, "red", scopes: SettingScopes.Application | SettingScopes.Tenant | SettingScopes.User, clientVisibilityProvider: new VisibleSettingClientVisibilityProvider()),
+                new SettingDefinition(AppSettingNames.UiTheme, "red", scopes: SettingScopes.Application | SettingScopes.Tenant | SettingScopes.User, clientVisibilityProvider: new VisibleSettingClientVisibilityProvider()),
                 new SettingDefinition(EmailSettingNames.Smtp.Host, "mail.teamoption.ng"),
                 new SettingDefinition(EmailSettingNames.Smtp.Port, "485"),
                 new SettingDefinition(EmailSettingNames.Smtp.UserName, "ecowas@teamoption.ng"),

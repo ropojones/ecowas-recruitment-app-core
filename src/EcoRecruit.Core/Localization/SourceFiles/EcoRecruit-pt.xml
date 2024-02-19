@@ -1,16 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <localizationDictionary culture="pt">
 <texts>
+
+	
+	
+	
+<text name="Update" value="Atualizar" />
+<text name="CoverLetter" value="Carta de apresentação" />	
+<text name="NotSpecified" value="Não especificado" />
+<text name="CreateNewApplicant" value="Criar novo candidato" />
+<text name="CurriculumVitae" value="Currículo on-line" />
+<text name="MyProfile" value="Perfil pessoal" />
+<text name="Headline" value="Título" />
+<text name="ApplicantManage" value="Gerenciar candidato" />
+<text name="ApplicantView" value="Ver candidato" />
+<text name="Applicant" value="Candidato" />
+<text name="Applicants" value="Candidatos" />
+<text name="EmploymentAvailability" value="Emprego e Disponibilidade" />
+<text name="EmploymentAvailabilityText" value="Manter esta seção atualizada é importante. Ele destaca as informações críticas exigidas pela CEDEAO para que você se pré-qualifique para o emprego e sua candidatura seja processada." />
+
+
+<text name="DateofBirth" value="Data de nascimento" />
+<text name="Years" value="anos" />
+<text name="Experience" value="Experiência" />
+<text name="PhoneNumber" value="Número de telefone" />
+
 <text name="AboutMe" value="Sobre mim" />
 	
-
-	<text name="HumanResourceOfficer" value="Diretor de Recursos Humanos" />
-	<text name="HumanResourceManager" value="Gerente de Recursos Humanos" />
+<text name="HumanResourceOfficer" value="Diretor de Recursos Humanos" />
+<text name="HumanResourceManager" value="Gerente de Recursos Humanos" />
 <text name="Jobs" value="Empregos" />	
-	<text name="ListOfJobs" value="Lista de empregos" />
-	<text name="DeleteJob" value="Excluir trabalho" />
-	<text name="UpdateJob" value="Atualizar trabalho" />
-	<text name="CreateJob" value="Criar trabalho" />
+<text name="ListOfJobs" value="Lista de empregos" />
+<text name="DeleteJob" value="Excluir trabalho" />
+<text name="UpdateJob" value="Atualizar trabalho" />
+<text name="CreateJob" value="Criar trabalho" />
 	
 <text name="GetStarted" value="Iniciar" />
 <text name="HowToApply" value="Como aplicar" />
@@ -23,10 +46,10 @@
 <text name="EcoWelcomeText" value="Bem-vindo ao EcoRecruit" />
 <text name="EcoWelcomeSubText" value="Plataforma online de recrutamento e recursos da CEDEAO. Quer construir uma carreira na CEDEAO? Crie connosco um CV online criando um perfil, preencha a sua qualificação académica e profissional, carregue o seu curriculum vitae, procure empregos adequados na CEDEAO e candidate-se. Mole-mole." />
 <text name="EcoWelcomeCatchPhrase" value="Construir uma força de trabalho diversificada e inclusiva na comunidade das pessoas." />
-	<text name="OrSignIn" value="ou Faça Login" />
-	<text name="CreateAccount" value="Criar conta EcoRecruit" />
+<text name="OrSignIn" value="ou Faça Login" />
+<text name="CreateAccount" value="Criar conta EcoRecruit" />
 	
-	<text name="UserFriendlyExistingApplicantEmail" value="Já existe um candidato com este e-mail." />
+<text name="UserFriendlyExistingApplicantEmail" value="Já existe um candidato com este e-mail." />
 <text name="UserFriendlyNonExistingApplicant" value="O requerente não existe." />
 <text name="UserFriendlyExistingApplication" value="Você já se inscreveu para esta vaga." />
 <text name="UserFriendlyExistingCertificate" value="Você já adicionou este certificado." />

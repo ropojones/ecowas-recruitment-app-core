@@ -7,12 +7,12 @@ namespace EcoRecruit.EntityFrameworkCore
     {
         public static void Configure(DbContextOptionsBuilder<EcoRecruitDbContext> builder, string connectionString)
         {
-            builder.UseSqlServer(connectionString);
+            builder.UseSqlServer(connectionString).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         }
 
         public static void Configure(DbContextOptionsBuilder<EcoRecruitDbContext> builder, DbConnection connection)
         {
-            builder.UseSqlServer(connection);
+            builder.UseSqlServer(connection).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking); ;
         }
     }
 }

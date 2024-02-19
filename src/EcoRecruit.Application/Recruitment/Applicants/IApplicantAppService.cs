@@ -17,7 +17,7 @@ namespace EcoRecruit.Recruitment.Applicants
 
         Task<ApplicantDto> GetApplicantAsync(long id);
 
-        Task<ApplicantDto> GetApplicantUserIdAsync(long id);
+        Task<ApplicantDto> GetApplicantUserIdAsync(long userId);
 
 
         Task<ApplicantDto> GetApplicantByAppNoAsync(string appNo);

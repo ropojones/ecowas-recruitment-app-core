@@ -36,6 +36,9 @@ namespace EcoRecruit.EntityFrameworkCore.Seed.Tenants
             if (adminRole == null)
             {
                 adminRole = _context.Roles.Add(new Role(_tenantId, StaticRoleNames.Tenants.Admin, StaticRoleNames.Tenants.Admin) { IsStatic = true }).Entity;
+                adminRole = _context.Roles.Add(new Role(_tenantId, StaticRoleNames.Tenants.HumanResourceAssistant, StaticRoleNames.Tenants.HumanResourceAssistant) { IsStatic = true }).Entity;
+                adminRole = _context.Roles.Add(new Role(_tenantId, StaticRoleNames.Tenants.HumanResourceOfficer, StaticRoleNames.Tenants.HumanResourceOfficer) { IsStatic = true }).Entity;
+                adminRole = _context.Roles.Add(new Role(_tenantId, StaticRoleNames.Tenants.Applicant, StaticRoleNames.Tenants.Applicant) { IsStatic = true }).Entity;
                 _context.SaveChanges();
             }
 

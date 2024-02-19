@@ -8,6 +8,9 @@ namespace EcoRecruit.Authorization
     {
         public override void SetPermissions(IPermissionDefinitionContext context)
         {
+            context.CreatePermission(PermissionNames.Pages_Applicants_Manage, L("ApplicantManage"));
+            context.CreatePermission(PermissionNames.Pages_Applicant_View, L("ApplicantView"));
+            context.CreatePermission(PermissionNames.Pages_Applicant, L("Applicant"));
             context.CreatePermission(PermissionNames.Pages_Users, L("Users"));
             context.CreatePermission(PermissionNames.Pages_Users_Activation, L("UsersActivation"));
             context.CreatePermission(PermissionNames.Pages_Roles, L("Roles"));

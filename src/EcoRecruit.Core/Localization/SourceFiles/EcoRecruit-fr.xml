@@ -2,19 +2,33 @@
 <localizationDictionary culture="fr">
 <texts>
 
+	
+	
+<text name="Update" value="Mise à jour" />
+<text name="CoverLetter" value="Lettre de motivation" />
+<text name="CreateNewApplicant" value="Créer un nouveau candidat" />
+<text name="CurriculumVitae" value="CV en ligne" />
+<text name="MyProfile" value="Profil personnel" />
+<text name="Headline" value="Gros titre" />
+<text name="ApplicantManage" value="Gérer le candidat" />
+<text name="ApplicantView" value="Voir le candidat" />
+<text name="Applicant" value="Demandeur" />
+<text name="Applicants" value="Candidats" />
+<text name="EmploymentAvailability" value="Emploi et disponibilité" />
+<text name="EmploymentAvailabilityText" value="Il est important de garder cette section à jour. Il met en évidence les informations critiques requises par la CEDEAO pour que vous puissiez vous pré-qualifier à un emploi et que votre candidature soit traitée." />
 
-
-	<text name="AboutMe" value="Sur moi" />
-
-	<text name="HumanResourceOfficer" value="Spécialiste des Ressources Humaines" />
-	<text name="HumanResourceManager" value="Directeur des Ressources Humaines" />
-
-
-	<text name="Jobs" value="Emplois" />
-	<text name="ListOfJobs" value="Liste des Emplois" />
-	<text name="DeleteJob" value="Supprimer le travail" />
-	<text name="UpdateJob" value="Mettre à jour le travail" />
-	<text name="CreateJob" value="Créer un emploi" />
+<text name="DateofBirth" value="Date de naissance" />
+<text name="Years" value="ans" />
+<text name="Experience" value="Expérience" />
+<text name="PhoneNumber" value="Numéro de téléphone" />
+<text name="AboutMe" value="Sur moi" />
+<text name="HumanResourceOfficer" value="Spécialiste des Ressources Humaines" />
+<text name="HumanResourceManager" value="Directeur des Ressources Humaines" />
+<text name="Jobs" value="Emplois" />
+<text name="ListOfJobs" value="Liste des Emplois" />
+<text name="DeleteJob" value="Supprimer le travail" />
+<text name="UpdateJob" value="Mettre à jour le travail" />
+<text name="CreateJob" value="Créer un emploi" />
 	
 <text name="GetStarted" value="Commencer" />
 <text name="HowToApply" value="Comment s'inscrire" />
@@ -22,10 +36,10 @@
 <text name="MyApplication" value="Mes applications" /> 
 <text name="Support" value="Soutien" />
 <text name="ExploreJobs" value="Explore jobs now" />
-	<text name="Careers" value="Carrières" />
+<text name="Careers" value="Carrières" />
 <text name="EcoWelcomeText" value="Bienvenue chez EcoRecruit" />
 <text name="EcoWelcomeSubText" value="Plateforme de recrutement et de ressourcement en ligne de la CEDEAO. Vous cherchez à faire carrière dans la CEDEAO ? Créez un CV en ligne avec nous en créant un profil, remplissez vos qualifications académiques et professionnelles, téléchargez votre curriculum vitae, 
-	  recherchez des emplois appropriés auprès de la CEDEAO et postulez. Très facile." />
+recherchez des emplois appropriés auprès de la CEDEAO et postulez. Très facile." />
 <text name="EcoWelcomeCatchPhrase" value="Bâtir une main-d’œuvre diversifiée et inclusive dans la communauté des gens." />
 
 <text name="OrSignIn" value="ou Connectez-vous" />

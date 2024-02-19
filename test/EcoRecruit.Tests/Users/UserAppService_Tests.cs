@@ -1,10 +1,9 @@
 ﻿using System.Threading.Tasks;
+using EcoRecruit.Users;
+using EcoRecruit.Users.Dto;
 using Microsoft.EntityFrameworkCore;
 using Shouldly;
 using Xunit;
-using Abp.Application.Services.Dto;
-using EcoRecruit.Users;
-using EcoRecruit.Users.Dto;
 
 namespace EcoRecruit.Tests.Users
 {

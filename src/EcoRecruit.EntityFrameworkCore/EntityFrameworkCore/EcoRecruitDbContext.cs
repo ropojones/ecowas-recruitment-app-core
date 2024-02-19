@@ -16,7 +16,7 @@ namespace EcoRecruit.EntityFrameworkCore
     public class EcoRecruitDbContext : AbpZeroDbContext<Tenant, Role, User, EcoRecruitDbContext>
     {
         /* Define a DbSet for each entity of the Applicant */
-        public DbSet<Application> ApplicationsData { get; set; }
+        public DbSet<Application> Applications { get; set; }
         public DbSet<Applicant> Applicants { get; set; }
         public DbSet<ApplicantCertificateAwarded> ApplicantCertificateAwards { get; set; }
         public DbSet<ApplicantCoverLetter> ApplicantCoverLetters { get; set; }
@@ -45,8 +45,9 @@ namespace EcoRecruit.EntityFrameworkCore
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Application>().HasOne<Applicant>(app => app.Applicant).WithMany(ap => ap.Applications).HasForeignKey(app => app.ApplicantId).OnDelete(DeleteBehavior.ClientCascade);
-            modelBuilder.Entity<Application>().HasIndex(app => new { app.JobId, app.ApplicantId }).IsUnique();
+            modelBuilder.Entity<Applicant>().HasMany(e => e.Jobs).WithMany(e => e.Applicants).UsingEntity<Application>();
+
+             modelBuilder.Entity<Application>().HasIndex(app => new {  app.UserId, app.ApplicantNumber }).IsUnique();
             
             modelBuilder.Entity<JobEcowasCompetence>().HasOne<Job>(jo => jo.Job).WithMany(ex => ex.JobEcowasCompetences).HasForeignKey(jo => jo.JobId).OnDelete(DeleteBehavior.ClientCascade);
             modelBuilder.Entity<JobEcowasCompetence>().HasIndex(jec => new { jec.CheckId, jec.JobId }).IsUnique();

@@ -20,6 +20,10 @@ namespace EcoRecruit.Authorization.Accounts.Dto
         [Required]
         [StringLength(AbpUserBase.MaxUserNameLength)]
         public string UserName { get; set; }
+        
+        [Required]
+        [StringLength(AbpUserBase.MaxPhoneNumberLength)]
+        public string PhoneNumber { get; set; }
 
         [Required]
         [EmailAddress]

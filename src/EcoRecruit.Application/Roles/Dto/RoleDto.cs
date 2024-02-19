@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 using Abp.Authorization.Roles;
-using Abp.AutoMapper;
 using EcoRecruit.Authorization.Roles;
 
 namespace EcoRecruit.Roles.Dto
@@ -12,13 +11,13 @@ namespace EcoRecruit.Roles.Dto
         [Required]
         [StringLength(AbpRoleBase.MaxNameLength)]
         public string Name { get; set; }
-        
+
         [Required]
         [StringLength(AbpRoleBase.MaxDisplayNameLength)]
         public string DisplayName { get; set; }
 
         public string NormalizedName { get; set; }
-        
+
         [StringLength(Role.MaxDescriptionLength)]
         public string Description { get; set; }
 

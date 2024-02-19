@@ -60,8 +60,7 @@ namespace EcoRecruit.Recruitment.Applicants
         {
             try
             {
-                var applicant= await _repository.SingleAsync(app => app.UserId == userId)
-                    ;
+                var applicant= await _repository.SingleAsync(app => app.UserId == userId);
                 if (applicant != null)
                 {
                     return applicant;
@@ -97,33 +96,30 @@ namespace EcoRecruit.Recruitment.Applicants
 
         public async Task<Applicant> CreateAsync(Applicant value)
         {
-            try
-            {
-                return await _repository.InsertAsync(value);
+            try 
+            { 
+                return await _repository.InsertAsync(value);             
             }
             catch (Exception ex)
             {
-                // Log the exception
+                    // Log the exception
                 _logger.LogError(ex, "Failed to create applicant.");
                 throw new ApplicationException("Failed to create applicant.", ex);
             }
-            
         }
 
         public async Task<Applicant> UpdateAsync(Applicant value)
-        {
-      
-            try
-            {
-                return await _repository.UpdateAsync(value);
-            }
-            catch (Exception ex)
-            {
-                // Log the exception
-                _logger.LogError(ex, "Failed to update applicant.");
-                throw new ApplicationException("Failed to update applicant.", ex);
-            }
-
+        {       
+                try
+                {
+                    return await _repository.UpdateAsync(value);
+                }
+                catch (Exception ex)
+                {
+                    // Log the exception
+                    _logger.LogError(ex, "Failed to create applicant.");
+                    throw new ApplicationException("Failed to create applicant.", ex);
+                }              
         }
 
         public async Task DeleteAsync(long id)
@@ -137,8 +133,7 @@ namespace EcoRecruit.Recruitment.Applicants
                 // Log the exception
                 _logger.LogError(ex, "Failed to delete applicant.");
                 throw new ApplicationException("Failed to delete applicant.", ex);
-            }
-          
+            }          
         }
 
          
@@ -146,8 +141,6 @@ namespace EcoRecruit.Recruitment.Applicants
         {
             var applicant = await _repository.GetAll().FirstOrDefaultAsync(app => app.UserId == userId);
             return applicant != null;
-            
-
         }
     }
 }

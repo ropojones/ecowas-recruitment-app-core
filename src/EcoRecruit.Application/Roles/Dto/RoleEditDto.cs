@@ -5,7 +5,7 @@ using EcoRecruit.Authorization.Roles;
 
 namespace EcoRecruit.Roles.Dto
 {
-    public class RoleEditDto: EntityDto<int>
+    public class RoleEditDto : EntityDto<int>
     {
         [Required]
         [StringLength(AbpRoleBase.MaxNameLength)]

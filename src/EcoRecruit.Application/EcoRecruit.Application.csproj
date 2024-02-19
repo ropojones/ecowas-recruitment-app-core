@@ -12,6 +12,10 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Abp.MailKit" Version="9.1.0" />
+    <PackageReference Include="MailKit" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\EcoRecruit.Core\EcoRecruit.Core.csproj" />
   </ItemGroup>
 </Project>

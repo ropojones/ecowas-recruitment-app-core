@@ -1,4 +1,5 @@
 ﻿using Abp.AutoMapper;
+using Abp.MailKit;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using EcoRecruit.Authorization;
@@ -7,7 +8,8 @@ namespace EcoRecruit
 {
     [DependsOn(
         typeof(EcoRecruitCoreModule), 
-        typeof(AbpAutoMapperModule))]
+        typeof(AbpAutoMapperModule),
+        typeof(AbpMailKitModule))]
     public class EcoRecruitApplicationModule : AbpModule
     {
         public override void PreInitialize()

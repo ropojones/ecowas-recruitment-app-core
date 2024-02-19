@@ -2,39 +2,66 @@
 <localizationDictionary culture="en">
 <texts>
 
-	<text name="AboutMe" value="About Me" />
 
-	<text name="ApplicantDashboard" value="Dashboard" />
-	<text name="ApplicantProfile" value="Career Profile" />
-	<text name="ApplicantHistory" value="My Applications" />
+
+
+<text name="CreateProfile" value="Create Profile" />
+
+<text name="UpdateProfile" value="Update Profile" />
+
+<text name="DeleteProfile" value="Delete Profile" />
+
+<text name="Update" value="Update" />
+<text name="CoverLetter" value="Cover Letter" />
+<text name="NotSpecified" value="Not Specified" />
+<text name="CreateNewApplicant" value="Create New Applicant" />
+<text name="CurriculumVitae" value="Online CV" />
+<text name="MyProfile" value="Personal Profile" />
+<text name="Headline" value="Headline" />
+<text name="ApplicantManage" value="Manage Applicant" />
+<text name="ApplicantView" value="View Applicant" />
+<text name="Applicant" value="Applicant" />
+<text name="Applicants" value="Applicants" />
+<text name="EmploymentAvailability" value="Employment and Availability" />
+<text name="EmploymentAvailabilityText" value="Keeping this section up to date is important. It highlights the critical	information required by ECOWAS for you to prequalify for employment and your application moved forward for processing. Providing false information would lead to automatic disqualification for your applications." />
+
+<text name="DateofBirth" value="Date of Birth" />
+<text name="Years" value="years" />
+<text name="Experience" value="Experience" />
+<text name="PhoneNumber" value="Phone Number" />
+<text name="AboutMe" value="About Me" />
+
+<text name="ApplicantDashboard" value="Dashboard" />
+<text name="ApplicantProfile" value="Career Profile" />
+<text name="ApplicantHistory" value="My Applications" />
 	
-	<text name="HumanResourceOfficer" value="Human Resource Officer" />
-	<text name="HumanResourceManager" value="Human Resources Manager" />
-	<text name="Jobs" value="Jobs" />
-	<text name="ListOfJobs" value="List of Jobs" />
-	<text name="DeleteJob" value="Delete Job" />
-	<text name="UpdateJob" value="Update Job " />
-	<text name="CreateJob" value="Create Job" />
+<text name="HumanResourceOfficer" value="Human Resource Officer" />
+<text name="HumanResourceManager" value="Human Resources Manager" />
+<text name="Jobs" value="Jobs" />
+<text name="ListOfJobs" value="List of Jobs" />
+<text name="DeleteJob" value="Delete Job" />
+<text name="UpdateJob" value="Update Job " />
+<text name="CreateJob" value="Create Job" />
 	
-	<text name="GetStarted" value="Get Started" />
+<text name="GetStarted" value="Get Started" />
 <text name="HowToApply" value="How to Apply" />
 <text name="CurrentJobs" value="Current Vacancies" />
 <text name="MyApplication" value="My Applications" />
 <text name="Support" value="Support" />
-	<text name="ExploreJobs" value="Explore jobs now" />
+<text name="ExploreJobs" value="Explore jobs now" />
 
-	<text name="Careers" value="Careers" />
+<text name="Careers" value="Careers" />
 <text name="EcoWelcomeText" value="Welcome to EcoRecruit" />
 <text name="EcoWelcomeSubText" value="ECOWAS online recruitment and resourcing platform. Looking to build a career in ECOWAS? Get started by 
-	  creating a profile, fill out your academic and professional quaification, upload your curriculum vitae, search for suitable jobs with ECOWAS and apply. Easy, peasy.  " />
+creating a profile, fill out your academic and professional quaification, upload your curriculum vitae, search for suitable jobs with ECOWAS and apply. Easy, peasy.  " />
 
-	<text name="EcoWelcomeCatchPhrase" value="Building a diverse and inclusive workforce in the community of the people." />
+<text name="EcoWelcomeCatchPhrase" value="Building a diverse and inclusive workforce in the community of the people." />
 <text name="OrSignIn" value="or Sign In" />
 
-	<text name="CreateAccount" value="Create EcoRecruit account" />
+<text name="CreateAccount" value="Create EcoRecruit account" />
 
 
-	<text name="UserFriendlyExistingApplicantEmail" value="There is already an applicant with this email." />
+<text name="UserFriendlyExistingApplicantEmail" value="There is already an applicant with this email." />
 <text name="UserFriendlyNonExistingApplicant" value="Applicant does not exist." />
 
 <text name="UserFriendlyExistingApplication" value="You have already applied for this position" />

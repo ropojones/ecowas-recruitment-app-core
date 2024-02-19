@@ -39,9 +39,9 @@ namespace EcoRecruit.Recruitment.Applicants
             var applicant = await _applicantRepository.GetAsync(id);
             return _mapper.Map<Applicant, ApplicantDto>(applicant);
         }
-        public async Task<ApplicantDto> GetApplicantUserIdAsync(long id)
+        public async Task<ApplicantDto> GetApplicantUserIdAsync(long userId)
         {
-            var applicant =  await _applicantRepository.FirstOrDefaultAsync(app => app.UserId == id); ;
+            var applicant =  await _applicantRepository.FirstOrDefaultAsync(app => app.UserId == userId); ;
             if (applicant != null)
             {
                 return _mapper.Map<Applicant, ApplicantDto>(applicant);

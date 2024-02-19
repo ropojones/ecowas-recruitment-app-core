@@ -17,11 +17,14 @@ using Abp.AspNetCore.SignalR.Hubs;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.IO;
-using EcoRecruit.Core.BackgroundServices;
 using Quartz;
-using Quartz.Core;
 using Quartz.Impl;
 using System.Collections.Specialized;
+using EcoRecruit.BackgroundServices.Factory;
+using EcoRecruit.BackgroundServices.Jobs;
+using EcoRecruit.Recruitment.Applicants;
+using EcoRecruit.Recruitment.Applicants.Interfaces;
+using EcoRecruit.Recruitment.Mail;
 
 namespace EcoRecruit.Web.Host.Startup
 {
@@ -47,7 +50,10 @@ namespace EcoRecruit.Web.Host.Startup
          
 
             services.AddSingleton(provider => _quartzScheduler);
-
+            services.AddTransient<CreateApplicantJob>();
+            services.AddScoped<IApplicantManager, ApplicantManager>();
+            services.Configure<MailSettings>(_appConfiguration.GetSection("MailSettings"));
+            services.AddTransient<IMailService, MailService>();
             //MVC
             services.AddControllersWithViews(options =>
             {
@@ -94,6 +100,8 @@ namespace EcoRecruit.Web.Host.Startup
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+
+            _quartzScheduler.JobFactory = new EcoRecruitJobFactory(app.ApplicationServices);
             app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
 
             app.UseCors(_defaultCorsPolicyName); // Enable CORS!
